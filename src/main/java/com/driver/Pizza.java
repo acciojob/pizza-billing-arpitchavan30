@@ -8,7 +8,7 @@ public class Pizza {
 
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
-        // your code goes here
+        this.price = 200;  // Base price for a regular pizza
     }
 
     public int getPrice(){
@@ -16,19 +16,19 @@ public class Pizza {
     }
 
     public void addExtraCheese(){
-        // your code goes here
+        this.price += 30;  // Additional cost for extra cheese
     }
 
     public void addExtraToppings(){
-        // your code goes here
+        this.price += 50;  // Additional cost for extra toppings
     }
 
     public void addTakeaway(){
-        // your code goes here
+        this.price += 20;  // Additional cost for takeaway
     }
 
     public String getBill(){
-        // your code goes here
+        this.bill = "Pizza Type: " + (isVeg ? "Veg" : "Non-Veg") + "\nTotal Bill: $" + price;
         return this.bill;
     }
 }
